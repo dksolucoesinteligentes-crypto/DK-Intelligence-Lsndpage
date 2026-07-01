@@ -409,6 +409,48 @@
     .spotlight-img-wrap{order:-1;}
   }
 
+  /* ===== Projects ===== */
+  .project-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;
+  }
+  .project-card{
+    border:1px solid var(--line);
+    background:linear-gradient(160deg, var(--surface) 0%, var(--bg) 100%);
+    border-radius:6px;
+    overflow:hidden;
+    transition:border-color .3s ease, transform .3s ease;
+    display:flex; flex-direction:column;
+  }
+  .project-card:hover{
+    border-color:var(--line-strong);
+    transform:translateY(-4px);
+  }
+  .project-logo-wrap{
+    aspect-ratio:16/11;
+    display:flex; align-items:center; justify-content:center;
+    background:#000;
+    border-bottom:1px solid var(--line);
+    padding:22px;
+  }
+  .project-logo-wrap img{
+    max-width:100%; max-height:100%; object-fit:contain;
+  }
+  .project-body{padding:28px; flex:1; display:flex; flex-direction:column;}
+  .project-tag{
+    font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.08em;
+    color:var(--gold-light); text-transform:uppercase; margin-bottom:10px;
+  }
+  .project-card h3{font-size:19px; margin-bottom:10px; color:var(--ink); font-weight:700;}
+  .project-card p{font-size:14.5px; color:var(--ink-dim); flex:1;}
+  .project-link{
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:'JetBrains Mono'; font-size:12.5px;
+    color:var(--blue); margin-top:18px;
+  }
+  .project-link:hover{color:#8fc4ef;}
+  @media (max-width:900px){ .project-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:600px){ .project-grid{grid-template-columns:1fr;} }
+
   /* ===== Services ===== */
   .services-grid{
     display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;
@@ -542,6 +584,7 @@
     <a href="#manifesto" data-id="manifesto">Propósito</a>
     <a href="#montarotai" data-id="montarotai">MontaRotaí</a>
     <a href="#servicos" data-id="servicos">Serviços</a>
+    <a href="#projetos" data-id="projetos">Projetos</a>
     <a href="#processo" data-id="processo">Como trabalhamos</a>
     <a href="https://wa.me/5516993996336" target="_blank" rel="noopener" class="compass-menu-cta">Falar no WhatsApp</a>
   </nav>
@@ -716,9 +759,59 @@
           <h3>Apps & Landing Pages</h3>
           <p>Aplicativos modernos e páginas que convertem visitantes em resultados reais.</p>
         </div>
+        <div class="service-card">
+          <div class="service-icon">◈</div>
+          <h3>Identidade Visual & Logomarca</h3>
+          <p>Marcas com presença: logotipo, paleta e identidade visual alinhados à estratégia do seu negócio.</p>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- PROJECTS -->
+  <section id="projetos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Prova no mundo real</div>
+        <h2>Projetos que<br><span class="gold-text">saíram do papel.</span></h2>
+        <p>Sistemas, páginas e marcas que desenhamos e colocamos em produção — do conceito à entrega.</p>
+      </div>
+      <div class="project-grid reveal">
+        <div class="project-card">
+          <div class="project-logo-wrap">
+            <img src="assets/logo-montarotai.jpg" alt="Logomarca MontaRotaí">
+          </div>
+          <div class="project-body">
+            <div class="project-tag">Sistema · App · Marca</div>
+            <h3>MontaRotaí</h3>
+            <p>Plataforma de gestão de entregas com rotas otimizadas, rastreamento em tempo real e IA — do sistema à identidade visual.</p>
+            <a href="https://www.montarotai.com.br" target="_blank" rel="noopener" class="project-link">Visitar montarotai.com.br →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-logo-wrap">
+            <img src="assets/logo-dkintelligence.png" alt="Logomarca DK Intelligence">
+          </div>
+          <div class="project-body">
+            <div class="project-tag">Landing Page · Marca</div>
+            <h3>DK Intelligence</h3>
+            <p>A própria casa: landpage institucional e identidade visual construídas para apresentar nossos sistemas e resultados.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-logo-wrap">
+            <img src="assets/logo-midiansayuri.png" alt="Logomarca Mídian Sayuri Psicóloga">
+          </div>
+          <div class="project-body">
+            <div class="project-tag">Landing Page · Marca</div>
+            <h3>Mídian Sayuri</h3>
+            <p>Landpage e identidade visual para consultório de psicologia voltado ao acolhimento e autoconhecimento de mulheres.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- PROCESS -->
   <section class="process" id="processo">
